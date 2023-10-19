@@ -104,7 +104,71 @@ class _AdminPageState extends State<AdminPage> {
       'contact': 'bob@example.com'
     },
   ];
-
+  List<Map<String, dynamic>> userDetails = [
+    {
+      'name': 'John',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Mary',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob0',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob1',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob2',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob3',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob4',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob5',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+    {
+      'name': 'Bob6',
+      'job': 'Driver',
+      'phone': '+91 1234567890',
+      'contact': 'john@example.com',
+      'access': '5'
+    },
+  ];
   List<String> users = [
     'John',
     'Mary',
@@ -220,11 +284,53 @@ class _AdminPageState extends State<AdminPage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             IconButton(
-                              icon: const Icon(Icons.edit),
-                              onPressed: () {},
+                              icon: const Icon(Icons.visibility),
+                              onPressed: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        content: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                  'Time: ${userDetails[index]['name']}'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                  'Duration: ${userDetails[index]['job']}'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                  'Gate: ${userDetails[index]['phone']}'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                  'Start: ${userDetails[index]['contact']}'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                  'Start: ${userDetails[index]['access']}'),
+                                            ),
+                                          ],
+                                        ),
+                                      );
+                                    });
+                              },
                             ),
                             IconButton(
-                              icon: const Icon(Icons.visibility),
+                              icon: const Icon(Icons.edit),
                               onPressed: () {},
                             ),
                           ],

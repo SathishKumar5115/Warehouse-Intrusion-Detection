@@ -16,67 +16,80 @@ class _GateLockPageState extends State<GateLockPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text('Key Page'),
+        ),
         body: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      _isLocked
-          ? SizedBox(
-              width: double.infinity,
-              height: 300,
-              child: IconButton(
-                  padding: EdgeInsets.zero,
-                  icon: const Icon(
-                    Icons.lock,
-                    size: 100,
-                  ),
-                  onPressed: () {
-                    _showPasswordDialog();
-                  }))
-          : SizedBox(
-              width: double.infinity,
-              height: 300,
-              child: IconButton(
-                padding: EdgeInsets.zero,
-                icon: const Icon(
-                  Icons.lock_open,
-                  size: 100,
-                ),
-                onPressed: () {
-                  _showPasswordDialog();
-                },
-              )),
-      Text(
-        _isLocked ? 'Locked' : 'Unlocked',
-        style: const TextStyle(fontSize: 24),
-      ),
-      DropdownButton(
-        value: _selectedGate,
-        items: const [
-          DropdownMenuItem(
-            value: 'North Gate',
-            child: Text('North Gate'),
+          _isLocked
+              ? SizedBox(
+                  width: double.infinity,
+                  height: 300,
+                  child: IconButton(
+                      padding: EdgeInsets.zero,
+                      icon: const Icon(
+                        Icons.lock,
+                        size: 100,
+                        color: Colors.red,
+                      ),
+                      onPressed: () {
+                        _showPasswordDialog();
+                      }))
+              : SizedBox(
+                  width: double.infinity,
+                  height: 300,
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    icon: const Icon(
+                      Icons.lock_open,
+                      size: 100,
+                      color: Colors.green,
+                    ),
+                    onPressed: () {
+                      _showPasswordDialog();
+                    },
+                  )),
+          Text(
+            _isLocked ? 'Locked' : 'Unlocked',
+            style: const TextStyle(fontSize: 24),
           ),
-          DropdownMenuItem(
-            value: 'South Gate',
-            child: Text('South Gate'),
+          DropdownButton(
+            value: _selectedGate,
+            items: const [
+              DropdownMenuItem(
+                value: 'North Gate',
+                child: Text('North Gate'),
+              ),
+              DropdownMenuItem(
+                value: 'East Gate',
+                child: Text('East Gate'),
+              ),
+              DropdownMenuItem(
+                value: 'West Gate',
+                child: Text('West Gate'),
+              ),
+              DropdownMenuItem(
+                value: 'South Gate',
+                child: Text('South Gate'),
+              ),
+            ],
+            onChanged: (value) {
+              setState(() {
+                _selectedGate = value!;
+              });
+            },
           ),
-        ],
-        onChanged: (value) {
-          setState(() {
-            _selectedGate = value!;
-          });
-        },
-      ),
-      TextButton(
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-        ),
-        onPressed: () {
-          _showPasswordDialog2();
-        },
-        child: const Text('Admin'),
-      )
-    ])));
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+            ),
+            onPressed: () {
+              _showPasswordDialog2();
+            },
+            child: const Text('Admin'),
+          )
+        ])));
   }
 
   void _showPasswordDialog() {
