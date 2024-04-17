@@ -72,7 +72,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 hintText: "Enter your name",
                 obsecureText: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25.0,
               ),
               InputField(
@@ -81,7 +81,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 hintText: "Enter your mail",
                 obsecureText: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25.0,
               ),
               InputField(

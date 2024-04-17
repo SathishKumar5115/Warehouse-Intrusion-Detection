@@ -116,56 +116,56 @@ class _AdminPageState extends State<AdminPage> {
       'name': 'Mary',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'mary@example.com',
       'access': '5'
     },
     {
       'name': 'Bob0',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob0@example.com',
       'access': '5'
     },
     {
       'name': 'Bob1',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob1@example.com',
       'access': '5'
     },
     {
       'name': 'Bob2',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob2@example.com',
       'access': '5'
     },
     {
       'name': 'Bob3',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob3@example.com',
       'access': '5'
     },
     {
       'name': 'Bob4',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob4@example.com',
       'access': '5'
     },
     {
       'name': 'Bob5',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob5@example.com',
       'access': '5'
     },
     {
       'name': 'Bob6',
       'job': 'Driver',
       'phone': '+91 1234567890',
-      'contact': 'john@example.com',
+      'contact': 'bob6@example.com',
       'access': '5'
     },
   ];
@@ -297,31 +297,31 @@ class _AdminPageState extends State<AdminPage> {
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                  'Time: ${userDetails[index]['name']}'),
+                                                  'Name: ${userDetails[index]['name']}'),
                                             ),
                                             Padding(
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                  'Duration: ${userDetails[index]['job']}'),
+                                                  'Job: ${userDetails[index]['job']}'),
                                             ),
                                             Padding(
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                  'Gate: ${userDetails[index]['phone']}'),
+                                                  'Phone: ${userDetails[index]['phone']}'),
                                             ),
                                             Padding(
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                  'Start: ${userDetails[index]['contact']}'),
+                                                  'Contact: ${userDetails[index]['contact']}'),
                                             ),
                                             Padding(
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                  'Start: ${userDetails[index]['access']}'),
+                                                  'Access: ${userDetails[index]['access']}'),
                                             ),
                                           ],
                                         ),

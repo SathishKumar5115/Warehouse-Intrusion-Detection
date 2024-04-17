@@ -18,12 +18,12 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left : 16.0,right : 20.0),
+      padding: const EdgeInsets.only(left: 16.0, right: 20.0),
       child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         obscureText: obsecureText,
         controller: controller,
-        style : const TextStyle(
+        style: const TextStyle(
           color: colorWhite,
           fontFamily: 'Schyler',
         ),
@@ -33,23 +33,23 @@ class InputField extends StatelessWidget {
           isDense: true,
           prefixIcon: Icon(
             icon,
-            color : colorWhite,
+            color: colorWhite,
             size: 25.0,
           ),
           // focusColor: Colors.yellow[900],
           hintText: hintText,
-          hintStyle: TextStyle(
-            color : colorGrey,
+          hintStyle: const TextStyle(
+            color: colorGrey,
             fontSize: 12.0,
             fontFamily: 'Schyler',
           ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color : colorWhite),
+          focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: colorWhite),
           ),
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color : Colors.red),
+          border: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.red),
           ),
-          contentPadding: EdgeInsets.only(top:15.0),
+          contentPadding: const EdgeInsets.only(top: 15.0),
         ),
       ),
     );
